@@ -2,3 +2,4 @@ httpx==0.16.1
 peewee==3.13.3
 nonebot==1.8.2
 Pillow==8.2.0
+pymysql
