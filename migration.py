@@ -65,7 +65,7 @@ if __name__ == '__main__':
 			table_name = 'question'
 			primary_key = CompositeKey('answer', 'group_id', 'is_all', 'question')
 			database = database
-			table_settings = ['ENGINE=InnoDB', 'DEFAULT CHARSET=utf8mb4']
+			table_settings = ['ENGINE=InnoDB', 'DEFAULT CHARSET=utf8mb4', 'ROW_FORMAT=DYNAMIC']
 	
 	
 	class question_log(Model):
@@ -79,7 +79,7 @@ if __name__ == '__main__':
 		
 		class Meta:
 			database = database
-			table_settings = ['ENGINE=InnoDB', 'DEFAULT CHARSET=utf8mb4']
+			table_settings = ['ENGINE=InnoDB', 'DEFAULT CHARSET=utf8mb4', 'ROW_FORMAT=DYNAMIC']
 	
 	
 	try:
