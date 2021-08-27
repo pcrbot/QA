@@ -47,7 +47,7 @@ class Question(Model):
 		table_name = 'question'
 		primary_key = CompositeKey('answer', 'group_id', 'is_all', 'question')
 		database = database
-		table_settings = ['ENGINE=InnoDB', 'DEFAULT CHARSET=utf8mb4']
+		table_settings = ['ENGINE=InnoDB', 'DEFAULT CHARSET=utf8mb4', 'ROW_FORMAT=DYNAMIC']
 
 
 if enable_index:
@@ -71,7 +71,7 @@ class question_log(Model):
 	
 	class Meta:
 		database = database
-		table_settings = ['ENGINE=InnoDB', 'DEFAULT CHARSET=utf8mb4']
+		table_settings = ['ENGINE=InnoDB', 'DEFAULT CHARSET=utf8mb4', 'ROW_FORMAT=DYNAMIC']
 
 
 try:
