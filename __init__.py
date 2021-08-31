@@ -53,7 +53,8 @@ async def pagination_display(session: CommandSession, display_title: str, questi
 				                                         message='指令错误，请重试')])
 		except asyncio.exceptions.TimeoutError:
 			return
-		during_interactive = False
+		finally:
+			during_interactive = False
 		if validator_regex.search(option):
 			await _delete_questions(session)
 			return
